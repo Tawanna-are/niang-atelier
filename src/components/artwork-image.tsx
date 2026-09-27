@@ -27,6 +27,8 @@ export function ArtworkImage({
           fill
           sizes={sizes}
           priority={priority}
+          // Large local collage PNGs should bypass the server optimizer.
+          unoptimized={image.src.startsWith("/images/works/")}
         />
       ) : null}
     </div>
